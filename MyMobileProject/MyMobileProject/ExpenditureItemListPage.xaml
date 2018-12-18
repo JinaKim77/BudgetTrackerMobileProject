@@ -14,9 +14,11 @@
 
     
     <ScrollView>
-        <StackLayout Spacing="5" Padding="20" BackgroundColor="LightBlue">  
-            
-        <ListView x:Name="listView" Margin="20" ItemSelected="ListView_ItemSelected">
+        <StackLayout Spacing="5" Padding="20" BackgroundColor="LightBlue">
+            <Label Text="       Category                                                                          Value"
+                   VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="DarkGreen" />
+
+            <ListView x:Name="listView" Margin="20" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
 
@@ -25,21 +27,31 @@
                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
                                 <StackLayout Orientation="Horizontal" Padding="0,0,0,0" Margin="0,0,0,0" HorizontalOptions="FillAndExpand">
-
                                     <BoxView WidthRequest="3" BackgroundColor="OrangeRed" Margin="0,0,0,0" />
-                                    <Label Text="{Binding Name}" TextColor="CornflowerBlue"  VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                    <Label Text="{Binding Notes}"  TextColor="DeepSkyBlue" VerticalTextAlignment="End"  HorizontalOptions="End" />
+
+                                    <Label  Grid.Row="0" Grid.Column="0" 
+                                             FontSize="15" FontAttributes="None" TextColor="Green" 
+                                            Text="{Binding Name}" VerticalTextAlignment="Center"
+                                            HorizontalOptions="StartAndExpand" />
+
+                                    <Label Grid.Row="1" Grid.Column="2"  Margin="0,0,10,0"
+                                           FontSize="18" FontAttributes="Bold" TextColor="Black" 
+                                           x:Name="getNums" Text="{Binding Notes}"
+                                           VerticalTextAlignment="End"  HorizontalOptions="EndAndExpand" />
 
                                     <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
 
                                 </StackLayout>
 
                             </Frame>
+                        
                         </ViewCell>
+                        
                     </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                    
+                </ListView.ItemTemplate>
 
+            </ListView>
             <Button x:Name="addExpenditure" Text="+ expenditure"  TextColor="DarkBlue" FontSize="Small" HorizontalOptions="CenterAndExpand"  
                     BackgroundColor="LightSkyBlue" Clicked="AddExpenditure_Clicked"/>
 

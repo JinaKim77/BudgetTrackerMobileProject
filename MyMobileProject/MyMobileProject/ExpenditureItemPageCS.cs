@@ -12,7 +12,9 @@ namespace MyMobileProject
 	{
 		public ExpenditureItemPageCS ()
 		{
-            Title = "Expense Item";
+            Title = "expenditure Item";
+
+           
 
             var nameEntry = new Entry();
             nameEntry.SetBinding(Entry.TextProperty, "Name");
@@ -26,16 +28,16 @@ namespace MyMobileProject
             var saveButton = new Button { Text = "Save" };
             saveButton.Clicked += async (sender, e) =>
             {
-                var todoItem = (ExpenditureItem)BindingContext;
-                await App.Database.SaveItemAsync(todoItem);
+                var expenditureItem = (ExpenditureItem)BindingContext;
+                await App.Database.SaveItemAsync(expenditureItem);
                 await Navigation.PopAsync();
             };
 
             var deleteButton = new Button { Text = "Delete" };
             deleteButton.Clicked += async (sender, e) =>
             {
-                var todoItem = (ExpenditureItem)BindingContext;
-                await App.Database.DeleteItemAsync(todoItem);
+                var expenditureItem = (ExpenditureItem)BindingContext;
+                await App.Database.DeleteItemAsync(expenditureItem);
                 await Navigation.PopAsync();
             };
 
@@ -48,8 +50,8 @@ namespace MyMobileProject
             var speakButton = new Button { Text = "Speak" };
             speakButton.Clicked += (sender, e) =>
             {
-                var todoItem = (ExpenditureItem)BindingContext;
-                DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);
+                var expenditureItem = (ExpenditureItem)BindingContext;
+                DependencyService.Get<ITextToSpeech>().Speak(expenditureItem.Name + " " + expenditureItem.Notes);
             };
 
             Content = new StackLayout

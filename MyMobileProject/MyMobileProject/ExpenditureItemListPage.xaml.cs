@@ -17,7 +17,9 @@ namespace MyMobileProject
 		public ExpenditureItemListPage ()
 		{
 			InitializeComponent ();
-		}
+
+            
+        }
 
         protected override async void OnAppearing()
         {
@@ -38,8 +40,7 @@ namespace MyMobileProject
 
         async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            //((App)App.Current).ResumeAtTodoId = (e.SelectedItem as TodoItem).ID;
-            //Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as TodoItem).ID);
+            
             if (e.SelectedItem != null)
             {
                 await Navigation.PushAsync(new ExpenditureItemPage

@@ -12,10 +12,11 @@
             <Label Text="Date"  />
                 <DatePicker Date= "{x:Static sys:DateTime.Today}" Format="dd MMM yyyy"/>
 
-                <Label Text="Category" />
-            <Entry Text="{Binding Name}" />
-                <Label Text="Value" />
-            <Entry x:Name="EntryValue" Text="{Binding Notes}"  Keyboard="Numeric" Placeholder="€" />
+            <Label Text="Category" />
+            <Entry x:Name="entryCategory" Text="{Binding Name}" />
+                
+            <Label Text="Value" />
+            <Entry x:Name="EntryValue" Text="{Binding Notes}" Keyboard="Numeric" Placeholder="€0.00" />
             <Label Text="Done" />
             <Switch IsToggled="{Binding Done}" />
                 

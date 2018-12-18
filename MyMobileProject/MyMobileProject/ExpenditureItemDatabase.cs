@@ -21,7 +21,7 @@ namespace MyMobileProjec
 
         public Task<List<ExpenditureItem>> GetItemsNotDoneAsync()
         {
-            return database.QueryAsync<ExpenditureItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+            return database.QueryAsync<ExpenditureItem>("SELECT * FROM [ExpenditureItem] WHERE [Done] = 0");
         }
 
         public Task<ExpenditureItem> GetItemAsync(int id)
