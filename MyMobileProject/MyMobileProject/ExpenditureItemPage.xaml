@@ -1,18 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyMobileProject.ExpenditureItemPage"
-             Title="{Binding Name}">
+             Title="{Binding Name}"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" >
     <ContentPage.Content>
-        <StackLayout Margin="20" VerticalOptions="StartAndExpand">
-            <Label Text="Name" />
+
+
+        <ScrollView>
+            
+            <StackLayout Spacing="5" Padding="20" BackgroundColor="LightPink">
+            
+            <Label Text="Date"  />
+                <DatePicker Date= "{x:Static sys:DateTime.Today}" Format="dd MMM yyyy"/>
+
+                <Label Text="Name" />
             <Entry Text="{Binding Name}" />
             <Label Text="Notes" />
-            <Entry Text="{Binding Notes}" />
+            <Entry Text="{Binding Notes}"  Keyboard="Numeric" Placeholder="€" />
             <Label Text="Done" />
             <Switch IsToggled="{Binding Done}" />
+                
             <Button Text="Save" Clicked="Button_Clicked" />
             <Button Text="Delete" Clicked="Button_Clicked_1" />
             <Button Text="Cancel" Clicked="Button_Clicked_2" />
             <Button Text="Speak" Clicked="Button_Clicked_3" />
         </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -18,7 +18,7 @@ namespace MyMobileProject
             Resources.Add("primaryGreen", Color.FromHex("91CA47"));
             Resources.Add("primaryDarkGreen", Color.FromHex("6FA22E"));
 
-            var nav = new NavigationPage(new ExpenditureItemListPage());
+            var nav = new NavigationPage(new EnteringPage()) { BarBackgroundColor = Color.Green, BackgroundColor = Color.LightBlue, BarTextColor = Color.White, Title = "Hello" };
             nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
             nav.BarTextColor = Color.White;
 

@@ -23,6 +23,7 @@ namespace MyMobileProject
         {
             var expenditureItem = (ExpenditureItem)BindingContext;
             await App.Database.SaveItemAsync(expenditureItem);
+            await DisplayAlert("Success", "All Vaues stored", "OK");
             await Navigation.PopAsync();
         }
 

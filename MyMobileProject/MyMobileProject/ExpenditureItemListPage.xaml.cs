@@ -11,6 +11,7 @@ using MyMobileProjec;
 namespace MyMobileProject
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
+
 	public partial class ExpenditureItemListPage : ContentPage
 	{
 		public ExpenditureItemListPage ()
@@ -46,6 +47,13 @@ namespace MyMobileProject
                     BindingContext = e.SelectedItem as ExpenditureItem
                 });
             }
+        }
+
+        
+
+        private void AddExpenditure_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ExpenditureItemPage());
         }
     }
 }

@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyMobileProject"
-             x:Class="MyMobileProject.MainPage">
+             x:Class="MyMobileProject.MainPage"
+             BackgroundColor="DodgerBlue"
+             Title="Welcome" BarBackgroundColor="DarkViolet"
+             BarTextColor="White">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <NavigationPage Title="main" >
+        <x:Arguments>
+            <local:ExpenditureItemListPage />
+        </x:Arguments>
+    </NavigationPage>
 
-</ContentPage>
+    <NavigationPage Title="main" >
+        <x:Arguments>
+            <local:ExpenditureItemPage />
+        </x:Arguments>
+    </NavigationPage>
+
+
+</TabbedPage>
