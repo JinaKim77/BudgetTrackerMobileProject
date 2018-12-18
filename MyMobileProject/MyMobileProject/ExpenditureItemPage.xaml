@@ -7,15 +7,15 @@
 
         <ScrollView>
             
-            <StackLayout Spacing="5" Padding="20" BackgroundColor="LightPink">
+            <StackLayout Spacing="5" Padding="20" BackgroundColor="LightSeaGreen">
             
             <Label Text="Date"  />
                 <DatePicker Date= "{x:Static sys:DateTime.Today}" Format="dd MMM yyyy"/>
 
-                <Label Text="Name" />
+                <Label Text="Category" />
             <Entry Text="{Binding Name}" />
-            <Label Text="Notes" />
-            <Entry Text="{Binding Notes}"  Keyboard="Numeric" Placeholder="€" />
+                <Label Text="Value" />
+            <Entry x:Name="EntryValue" Text="{Binding Notes}"  Keyboard="Numeric" Placeholder="€" />
             <Label Text="Done" />
             <Switch IsToggled="{Binding Done}" />
                 

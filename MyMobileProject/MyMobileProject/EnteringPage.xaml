@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyMobileProject.EnteringPage"
-             BackgroundColor="DodgerBlue">
+             BackgroundColor="LightSkyBlue">
 
     <ContentPage.Content>
         <AbsoluteLayout x:Name="rootLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
@@ -11,23 +11,23 @@
             </StackLayout>
             <ContentView x:Name="popupOverlay"
                      IsVisible="{Binding IsPopupVisible}"
-                     BackgroundColor="LightPink"
+                     BackgroundColor="LightBlue"
                      AbsoluteLayout.LayoutBounds="0,0,1,1"
                      AbsoluteLayout.LayoutFlags="All">
 
 
-                <StackLayout Orientation="Vertical" >
-                    <Label Text="Hello ^0^" HorizontalTextAlignment="Center" FontSize="18" FontAttributes="Bold" />
+                <StackLayout VerticalOptions="CenterAndExpand" >
+                    <Label Text="Expense Tracker" HorizontalTextAlignment="Center" FontSize="40" TextColor="WhiteSmoke" FontAttributes="Bold" />
 
                     <BoxView HeightRequest="50" />
 
-                    <Label Text="What's your name?" />
-                    <Entry x:Name="Name" BackgroundColor="LightGray" Placeholder="Your name?" PlaceholderColor="Coral"   
+                    <Label Text="Enter your name" />
+                    <Entry x:Name="Name" BackgroundColor="LightGray" Placeholder="Your name?" PlaceholderColor="WhiteSmoke"   
                            TextColor="Blue"/>
                   
-                    <Button x:Name="BtnLogin" Text="Login" Command="{Binding ExecuteLoginCommand}" TextColor="BlueViolet"  
+                    <Button x:Name="BtnLogin" Text="Login" Command="{Binding ExecuteLoginCommand}" TextColor="WhiteSmoke"  
                     FontAttributes="Bold" FontSize="Small" HorizontalOptions="FillAndExpand"  
-                   BackgroundColor="#FF30DABB" Clicked="BtnLogin_Clicked"/>
+                   BackgroundColor="CadetBlue" Clicked="BtnLogin_Clicked"/>
 
                    
                 </StackLayout>

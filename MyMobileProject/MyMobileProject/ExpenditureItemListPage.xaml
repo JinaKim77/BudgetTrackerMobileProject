@@ -12,29 +12,36 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
+    
     <ScrollView>
-        <StackLayout Spacing="5" Padding="20" BackgroundColor="LightPink">  
+        <StackLayout Spacing="5" Padding="20" BackgroundColor="LightBlue">  
             
         <ListView x:Name="listView" Margin="20" ItemSelected="ListView_ItemSelected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding Name}"  VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                        <Label Text="{Binding Notes}"  VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                        
-                        <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
+                <ListView.ItemTemplate>
+                    <DataTemplate>
 
-                    </StackLayout>
-                </ViewCell>
-               
-            </DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="5,5,5,3" Padding="2,2,2,2" CornerRadius="0" OutlineColor="LightGray" HasShadow="False"
+                           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                                <StackLayout Orientation="Horizontal" Padding="0,0,0,0" Margin="0,0,0,0" HorizontalOptions="FillAndExpand">
+
+                                    <BoxView WidthRequest="3" BackgroundColor="OrangeRed" Margin="0,0,0,0" />
+                                    <Label Text="{Binding Name}" TextColor="CornflowerBlue"  VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding Notes}"  TextColor="DeepSkyBlue" VerticalTextAlignment="End"  HorizontalOptions="End" />
+
+                                    <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
+
+                                </StackLayout>
+
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
 
-            <Button x:Name="addExpenditure" Text="+ expenditure"  TextColor="BlueViolet"  
-                    FontAttributes="Bold"  FontSize="Small" HorizontalOptions="Start"  
-                    BackgroundColor="#FF30DABB" Clicked="AddExpenditure_Clicked"/>
+            <Button x:Name="addExpenditure" Text="+ expenditure"  TextColor="DarkBlue" FontSize="Small" HorizontalOptions="CenterAndExpand"  
+                    BackgroundColor="LightSkyBlue" Clicked="AddExpenditure_Clicked"/>
 
             
 

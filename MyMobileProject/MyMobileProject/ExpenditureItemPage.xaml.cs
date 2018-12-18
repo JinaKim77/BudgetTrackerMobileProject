@@ -17,6 +17,8 @@ namespace MyMobileProject
 		public ExpenditureItemPage ()
 		{
 			InitializeComponent ();
+
+          
 		}
 
         async void Button_Clicked(object sender, EventArgs e)  //save

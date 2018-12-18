@@ -12,7 +12,7 @@ namespace MyMobileProject
 	{
 		public ExpenditureItemPageCS ()
 		{
-            Title = "Todo Item";
+            Title = "Expense Item";
 
             var nameEntry = new Entry();
             nameEntry.SetBinding(Entry.TextProperty, "Name");
