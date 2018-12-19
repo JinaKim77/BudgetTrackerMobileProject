@@ -28,12 +28,23 @@ namespace MyMobileProject
         
         async void Button_Clicked(object sender, EventArgs e)  //save
         {
-            var expenditureItem = (ExpenditureItem)BindingContext;
-            await App.Database.SaveItemAsync(expenditureItem);
-            await App.Database.SaveItemAsyncs(expenditureItem);
-            await DisplayAlert("Success", "All Vaues stored", "OK");
-            await Navigation.PopAsync();
+        
+            bool isCategoryEnpty, isValueEmpty;
+            isCategoryEnpty = String.IsNullOrEmpty(entryCategory.Text);
+            isValueEmpty = String.IsNullOrEmpty(EntryValue.Text);
 
+            if (isCategoryEnpty || isValueEmpty)
+            {
+                await DisplayAlert("Error", "You have to type category and amount", "OK");
+            }
+            else
+            {
+                var expenditureItem = (ExpenditureItem)BindingContext;
+                await App.Database.SaveItemAsync(expenditureItem);
+                await App.Database.SaveItemAsyncs(expenditureItem);
+                await Navigation.PopAsync();
+                await DisplayAlert("Success", "All Vaues stored", "OK");
+            }
         }
 
         public void getTotalExpenses()
@@ -48,10 +59,24 @@ namespace MyMobileProject
 
         async void Button_Clicked_1(object sender, EventArgs e)  //delete
         {
-            var expenditureItem = (ExpenditureItem)BindingContext;
-            await App.Database.DeleteItemAsync(expenditureItem);
-            await DisplayAlert("Success", "All Vaues delete", "OK");
-            await Navigation.PopAsync();
+
+
+            bool isCategoryEnpty, isValueEmpty;
+            isCategoryEnpty = String.IsNullOrEmpty(entryCategory.Text);
+            isValueEmpty = String.IsNullOrEmpty(EntryValue.Text);
+
+           
+            if (isCategoryEnpty || isValueEmpty )
+            {
+                await DisplayAlert("Error", "delete what? ", "OK");
+            }
+            else
+            {
+                var expenditureItem = (ExpenditureItem)BindingContext;
+                await App.Database.DeleteItemAsync(expenditureItem);
+                await DisplayAlert("Success", "All Vaues delete", "OK");
+                await Navigation.PopAsync();
+            }
         }
 
         async void Button_Clicked_2(object sender, EventArgs e)  //cancel

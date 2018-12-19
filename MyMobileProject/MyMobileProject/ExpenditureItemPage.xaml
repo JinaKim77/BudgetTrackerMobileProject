@@ -22,10 +22,8 @@
             <Label x:Name="TotalAmount " Text="{Binding AnswerValue}" HorizontalOptions="Center"
                                            VerticalTextAlignment="Center" />
 
-            <Label Text="Done" />
-
-
-            <Switch IsToggled="{Binding Done}" />
+            <Label Text="Done" VerticalTextAlignment="Center"  HorizontalOptions="Center" />
+            <Switch IsToggled="{Binding Done}" VerticalOptions="Center"  HorizontalOptions="Center"  />
                 
             <Button Text="Save" Clicked="Button_Clicked" />
             <Button Text="Delete" Clicked="Button_Clicked_1" />

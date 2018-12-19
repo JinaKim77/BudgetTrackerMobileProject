@@ -16,7 +16,7 @@
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="Black" />
 
             <Label Text="       Category                                                                               Value"
-                   VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="DarkGreen" />
+                   VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="White" />
 
             <ListView x:Name="listView" Margin="20" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
