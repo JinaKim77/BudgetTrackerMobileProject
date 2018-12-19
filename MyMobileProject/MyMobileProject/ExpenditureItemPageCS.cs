@@ -31,7 +31,11 @@ namespace MyMobileProject
                 var expenditureItem = (ExpenditureItem)BindingContext;
                 await App.Database.SaveItemAsync(expenditureItem);
                 await Navigation.PopAsync();
+
+
             };
+
+
 
             var deleteButton = new Button { Text = "Delete" };
             deleteButton.Clicked += async (sender, e) =>

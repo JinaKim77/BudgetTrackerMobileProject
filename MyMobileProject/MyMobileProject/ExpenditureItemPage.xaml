@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyMobileProject.ExpenditureItemPage"
              Title="{Binding Name}"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib" >
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"  >
     <ContentPage.Content>
 
 
@@ -13,10 +13,15 @@
                 <DatePicker Date= "{x:Static sys:DateTime.Today}" Format="dd MMM yyyy"/>
 
             <Label Text="Category" />
-            <Entry x:Name="entryCategory" Text="{Binding Name}" />
+            <Entry x:Name="entryCategory" Text="{Binding Name}"  />
                 
             <Label Text="Value" />
             <Entry x:Name="EntryValue" Text="{Binding Notes}" Keyboard="Numeric" Placeholder="€0.00" />
+
+                
+            <Label x:Name="TotalAmount " Text="{Binding AnswerValue}" HorizontalOptions="Center"
+                                           VerticalTextAlignment="Center" />
+
             <Label Text="Done" />
 
 

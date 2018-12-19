@@ -21,12 +21,6 @@ namespace MyMobileProject
             
         }
 
-        public void getTotalExpenses()
-        {
-            
-
-            double total = 0;
-        }
 
         protected override async void OnAppearing()
         {

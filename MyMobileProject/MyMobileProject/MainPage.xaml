@@ -7,13 +7,13 @@
              Title="Welcome" BarBackgroundColor="DarkViolet"
              BarTextColor="White">
 
-    <NavigationPage Title="main" >
+    <NavigationPage Title="display all expenses" >
         <x:Arguments>
             <local:ExpenditureItemListPage />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="main" >
+    <NavigationPage Title="add expenses" >
         <x:Arguments>
             <local:ExpenditureItemPage />
         </x:Arguments>

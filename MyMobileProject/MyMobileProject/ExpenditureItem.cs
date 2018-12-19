@@ -15,14 +15,6 @@ namespace MyMobileProjec
 
         public bool Done { get; set; }
 
-        public ExpenditureItem(int id, string name, double notes, bool done)
-        {
-            ID = id;
-            Name = name;
-            Notes = notes;
-            Done = done;
-        }
-
         public string FormattedPrice
         {
             get

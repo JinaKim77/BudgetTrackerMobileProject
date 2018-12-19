@@ -17,7 +17,7 @@
 
 
                 <StackLayout VerticalOptions="CenterAndExpand" >
-                    <Label Text="Expense Tracker" HorizontalTextAlignment="Center" FontSize="40" TextColor="WhiteSmoke" FontAttributes="Bold" />
+                    <Label Text="Daily expense tracker" HorizontalTextAlignment="Center" FontSize="40" TextColor="WhiteSmoke" FontAttributes="Bold" />
 
                     <BoxView HeightRequest="50" />
 
@@ -25,7 +25,7 @@
                     <Entry x:Name="Name" BackgroundColor="LightGray" Placeholder="Your name?" PlaceholderColor="WhiteSmoke"   
                            TextColor="Blue"/>
                   
-                    <Button x:Name="BtnLogin" Text="Login" Command="{Binding ExecuteLoginCommand}" TextColor="WhiteSmoke"  
+                    <Button x:Name="BtnLogin" Text="Enter" Command="{Binding ExecuteLoginCommand}" TextColor="WhiteSmoke"  
                     FontAttributes="Bold" FontSize="Small" HorizontalOptions="FillAndExpand"  
                    BackgroundColor="CadetBlue" Clicked="BtnLogin_Clicked"/>
 

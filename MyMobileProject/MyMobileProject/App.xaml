@@ -11,9 +11,9 @@
 
         <Style x:Key="normalButton" TargetType="Button" >
             <Setter Property="BackgroundColor" 
-                    Value="{StaticResource blueColor}" />
+                    Value="Transparent"/>
             <Setter Property="TextColor" 
-                    Value="{StaticResource whiteColor}" />
+                     Value="White"/>
         </Style>
 
     
