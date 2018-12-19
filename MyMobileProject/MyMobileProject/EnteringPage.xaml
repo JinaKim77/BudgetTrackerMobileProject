@@ -7,6 +7,7 @@
     <ContentPage.Content>
         <AbsoluteLayout x:Name="rootLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
             <StackLayout x:Name="mainLayout" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                
                 <!-- Put your main contents-->
             </StackLayout>
             <ContentView x:Name="popupOverlay"
@@ -21,7 +22,6 @@
 
                     <BoxView HeightRequest="50" />
 
-                    <Label Text="Enter your name" />
                     <Entry x:Name="Name" BackgroundColor="LightGray" Placeholder="Your name?" PlaceholderColor="WhiteSmoke"   
                            TextColor="Blue"/>
                   

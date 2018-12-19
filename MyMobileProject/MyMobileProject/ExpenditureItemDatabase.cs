@@ -37,17 +37,32 @@ namespace MyMobileProjec
                 return database.UpdateAsync(item);
 
             }
+
             else
             {
                 return database.InsertAsync(item);
             }
+        }
 
+        public Task<int> SaveItemAsyncs(ExpenditureItem items)
+        {
             
+            if (items.Notes >= 0)
+            {
+                double total = 0;
+                total = total + items.Notes;
+                return database.UpdateAsync(items);
+            }
 
+            else
+            {
+                return database.InsertAsync(items);
+            }
 
         }
 
-        public Task<int> DeleteItemAsync(ExpenditureItem item)
+        //-----------------
+            public Task<int> DeleteItemAsync(ExpenditureItem item)
         {
             return database.DeleteAsync(item);
         }

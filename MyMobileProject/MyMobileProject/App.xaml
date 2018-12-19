@@ -5,17 +5,11 @@
     
     <Application.Resources>
 
-
-        <Color x:Key="blueColor">#1E90FF</Color>
-        <Color x:Key="whiteColor">#FFFFFF</Color>
-
-        <Style x:Key="normalButton" TargetType="Button" >
-            <Setter Property="BackgroundColor" 
-                    Value="Transparent"/>
-            <Setter Property="TextColor" 
-                     Value="White"/>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="DarkTurquoise"/>
+            <Setter Property="BarTextColor" Value="Black"/>
+            <Setter Property="Title" Value="Hello"/>
         </Style>
 
-    
     </Application.Resources>
 </Application>

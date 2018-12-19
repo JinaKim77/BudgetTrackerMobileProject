@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyMobileProject"
              x:Class="MyMobileProject.MainPage"
-             BackgroundColor="DodgerBlue"
-             Title="Welcome" BarBackgroundColor="DarkViolet"
-             BarTextColor="White">
+             BackgroundColor="LightGray"
+             Title="Welcome to budget tracker" BarBackgroundColor="DimGray"
+             BarTextColor="Wheat" >
 
-    <NavigationPage Title="display all expenses" >
+  
+    <NavigationPage Title="All expenses" >s
         <x:Arguments>
             <local:ExpenditureItemListPage />
         </x:Arguments>
@@ -19,5 +20,10 @@
         </x:Arguments>
     </NavigationPage>
 
+    <NavigationPage Title="Contact" >
+        <x:Arguments>
+            <local:Contact />
+        </x:Arguments>
+    </NavigationPage>
 
 </TabbedPage>

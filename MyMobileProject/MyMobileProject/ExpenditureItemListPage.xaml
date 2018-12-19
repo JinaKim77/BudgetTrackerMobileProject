@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyMobileProject.ExpenditureItemListPage" BackgroundColor="DodgerBlue">
+             x:Class="MyMobileProject.ExpenditureItemListPage" BackgroundColor="LavenderBlush">
     
     
     <ContentPage.ToolbarItems>
@@ -10,8 +10,12 @@
 
     
     <ScrollView>
-        <StackLayout Spacing="5" Padding="20" BackgroundColor="Beige">
-            <Label Text="       Category                                                                          Value"
+        <StackLayout Spacing="5" Padding="20" BackgroundColor="LightSlateGray">
+            <Label Text=" We do not provide total amount, it only shows what you spend, use calculator!"
+                   
+                   VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="Black" />
+
+            <Label Text="       Category                                                                               Value"
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="DarkGreen" />
 
             <ListView x:Name="listView" Margin="20" ItemSelected="ListView_ItemSelected">
@@ -26,12 +30,12 @@
                                     <BoxView WidthRequest="3" BackgroundColor="OrangeRed" Margin="0,0,0,0" />
 
                                     <Label  Grid.Row="0" Grid.Column="0" 
-                                             FontSize="15" FontAttributes="None" TextColor="Green" 
+                                             FontSize="15" FontAttributes="None" TextColor="White" 
                                             Text="{Binding Name}" VerticalTextAlignment="Center"
                                             HorizontalOptions="StartAndExpand" />
 
                                     <Label Grid.Row="1" Grid.Column="2"  Margin="0,0,10,0"
-                                           FontSize="18" FontAttributes="Bold" TextColor="Black" 
+                                           FontSize="18" FontAttributes="Bold" TextColor="White" 
                                            x:Name="getNums" Text="{Binding Notes}"
                                            VerticalTextAlignment="End"  HorizontalOptions="EndAndExpand" />
 
@@ -51,8 +55,8 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-            <Button x:Name="addExpenditure" Text="+ expenditure"  TextColor="DarkBlue" FontSize="Small" HorizontalOptions="CenterAndExpand"  
-                    BackgroundColor="LightSkyBlue" Clicked="AddExpenditure_Clicked"/>
+            <Button x:Name="addExpenditure" Text="+ expenditure"  TextColor="WhiteSmoke" FontSize="Small" HorizontalOptions="CenterAndExpand"  
+                    BackgroundColor="Gray" Clicked="AddExpenditure_Clicked"/>
 
             
 

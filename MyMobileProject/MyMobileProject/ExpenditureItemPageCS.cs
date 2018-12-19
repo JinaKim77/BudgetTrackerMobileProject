@@ -30,6 +30,7 @@ namespace MyMobileProject
             {
                 var expenditureItem = (ExpenditureItem)BindingContext;
                 await App.Database.SaveItemAsync(expenditureItem);
+                await App.Database.SaveItemAsyncs(expenditureItem);
                 await Navigation.PopAsync();
 
 
