@@ -21,6 +21,13 @@ namespace MyMobileProject
             
         }
 
+        public void getTotalExpenses()
+        {
+            
+
+            double total = 0;
+        }
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();
@@ -30,6 +37,8 @@ namespace MyMobileProject
             listView.ItemsSource = await App.Database.GetItemsAsync();
         }
 
+
+        // work when toolbar item checked
         async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ExpenditureItemPage
@@ -38,6 +47,8 @@ namespace MyMobileProject
             });
         }
 
+
+        //when item is selected
         async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             
@@ -56,5 +67,7 @@ namespace MyMobileProject
         {
             Navigation.PushAsync(new ExpenditureItemPage());
         }
+
+       
     }
 }

@@ -17,6 +17,7 @@ namespace MyMobileProject
 
         public bool ShouldReactToTextChanges { get; set; }
 
+
         public ExpenditureItemPage ()
 		{
 			InitializeComponent ();
@@ -24,13 +25,15 @@ namespace MyMobileProject
 
         }
 
+        private int i;
         async void Button_Clicked(object sender, EventArgs e)  //save
         {
             var expenditureItem = (ExpenditureItem)BindingContext;
             await App.Database.SaveItemAsync(expenditureItem);
             await DisplayAlert("Success", "All Vaues stored", "OK");
             await Navigation.PopAsync();
-            
+
+
 
         }
 
@@ -88,6 +91,6 @@ namespace MyMobileProject
 
             //return string.Format(new CultureInfo("en-US"), "{0:N}", finalValue);
         }
-
+        
     }
 }

@@ -31,14 +31,20 @@ namespace MyMobileProjec
 
         public Task<int> SaveItemAsync(ExpenditureItem item)
         {
+
             if (item.ID != 0)
             {
                 return database.UpdateAsync(item);
+
             }
             else
             {
                 return database.InsertAsync(item);
             }
+
+            
+
+
         }
 
         public Task<int> DeleteItemAsync(ExpenditureItem item)

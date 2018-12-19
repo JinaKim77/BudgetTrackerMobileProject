@@ -6,10 +6,16 @@
     <Application.Resources>
 
 
-        <!-- NavigationPage Style -->
-        <Style TargetType="NavigationPage" ApplyToDerivedTypes="true">
-            <Setter Property="BarBackgroundColor" Value="#3c70c4" />
-            <Setter Property="BarTextColor" Value="White" />
+        <Color x:Key="blueColor">#1E90FF</Color>
+        <Color x:Key="whiteColor">#FFFFFF</Color>
+
+        <Style x:Key="normalButton" TargetType="Button" >
+            <Setter Property="BackgroundColor" 
+                    Value="{StaticResource blueColor}" />
+            <Setter Property="TextColor" 
+                    Value="{StaticResource whiteColor}" />
         </Style>
+
+    
     </Application.Resources>
 </Application>

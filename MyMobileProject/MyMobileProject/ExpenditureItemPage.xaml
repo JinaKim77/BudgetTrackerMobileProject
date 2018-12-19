@@ -18,7 +18,9 @@
             <Label Text="Value" />
             <Entry x:Name="EntryValue" Text="{Binding Notes}" Keyboard="Numeric" Placeholder="€0.00" />
             <Label Text="Done" />
-            <Switch IsToggled="{Binding Done}" />
+
+
+                <Switch IsToggled="{Binding Done}" />
                 
             <Button Text="Save" Clicked="Button_Clicked" />
             <Button Text="Delete" Clicked="Button_Clicked_1" />

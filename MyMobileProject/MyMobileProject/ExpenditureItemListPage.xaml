@@ -39,6 +39,8 @@
                                            x:Name="getNums" Text="{Binding Notes}"
                                            VerticalTextAlignment="End"  HorizontalOptions="EndAndExpand" />
 
+                                    <Label x:Name="lblAnswer " Text="{Binding AnswerValue}" />
+
                                     <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
 
                                 </StackLayout>
