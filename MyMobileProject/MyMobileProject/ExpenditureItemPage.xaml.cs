@@ -23,7 +23,7 @@ namespace MyMobileProject
 			InitializeComponent ();
             ShouldReactToTextChanges = true;
 
-        }
+        } 
 
         
         async void Button_Clicked(object sender, EventArgs e)  //save
