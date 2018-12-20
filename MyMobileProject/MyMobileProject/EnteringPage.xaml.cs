@@ -34,7 +34,7 @@ namespace MyMobileProject
             else
             {
                 DisplayAlert("welcome", str, "O");
-                Navigation.PushAsync(new MainPage());
+                Navigation.PushAsync(new ExpenditureItemListPage());
             }
         }
     }
