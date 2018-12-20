@@ -1,4 +1,4 @@
-﻿using MyMobileProjec;
+using MyMobileProjec;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,12 +23,12 @@ namespace MyMobileProject
 			InitializeComponent ();
             ShouldReactToTextChanges = true;
 
-        } 
+        }
 
-        
+
         async void Button_Clicked(object sender, EventArgs e)  //save
         {
-        
+
             bool isCategoryEnpty, isValueEmpty;
             isCategoryEnpty = String.IsNullOrEmpty(entryCategory.Text);
             isValueEmpty = String.IsNullOrEmpty(EntryValue.Text);
@@ -41,10 +41,11 @@ namespace MyMobileProject
             {
                 var expenditureItem = (ExpenditureItem)BindingContext;
                 await App.Database.SaveItemAsync(expenditureItem);
-                await App.Database.SaveItemAsyncs(expenditureItem);
+
                 await Navigation.PopAsync();
                 await DisplayAlert("Success", "All Vaues stored", "OK");
             }
+
         }
 
         async void Button_Clicked_1(object sender, EventArgs e)  //delete
@@ -55,8 +56,8 @@ namespace MyMobileProject
             isCategoryEnpty = String.IsNullOrEmpty(entryCategory.Text);
             isValueEmpty = String.IsNullOrEmpty(EntryValue.Text);
 
-           
-            if (isCategoryEnpty || isValueEmpty )
+
+            if (isCategoryEnpty || isValueEmpty)
             {
                 await DisplayAlert("Error", "delete what? ", "OK");
             }
@@ -78,9 +79,9 @@ namespace MyMobileProject
         {
             var expenditureItem = (ExpenditureItem)BindingContext;
             DependencyService.Get<ITextToSpeech>().Speak(expenditureItem.Name + " " + expenditureItem.Notes);
-            
+
         }
 
-       
+
     }
 }
