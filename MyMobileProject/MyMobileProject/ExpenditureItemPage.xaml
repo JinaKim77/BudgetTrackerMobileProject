@@ -1,32 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyMobileProject.ExpenditureItemPage"
-             Title="{Binding Name}"
-             
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"  >
+             Title="{Binding Name}"   xmlns:sys="clr-namespace:System;assembly=mscorlib"  >
     <ContentPage.Content>
 
 
         <ScrollView>
-            
+
             <StackLayout Spacing="5" Padding="20" BackgroundColor="LightSeaGreen">
-            
-            <Label Text="Date"  />
+
+                <Label Text="Date"  />
                 <DatePicker Date= "{x:Static sys:DateTime.Today}" Format="dd MMM yyyy"/>
 
-            <Label Text="Category" />
-            <Entry x:Name="entryCategory" Text="{Binding Name}"  />
-                
-            <Label Text="Value" />
-            <Entry x:Name="EntryValue" Text="{Binding Notes}" Keyboard="Numeric" Placeholder="€0.00" />
+                <Label Text="Category" />
+                <Entry x:Name="entryCategory" Text="{Binding Name}"  />
 
-            <Label Text="Done" VerticalTextAlignment="Center"  HorizontalOptions="Center" />
-            <Switch IsToggled="{Binding Done}" VerticalOptions="Center"  HorizontalOptions="Center"  />
-                
-            <Button Text="Save" Clicked="Button_Clicked" />
-            <Button Text="Delete" Clicked="Button_Clicked_1" />
-            <Button Text="Cancel" Clicked="Button_Clicked_2" />
-            <Button Text="Speak" Clicked="Button_Clicked_3" />
-        </StackLayout>
+                <Label Text="Value" />
+                <Entry x:Name="EntryValue" Text="{Binding Notes}" Keyboard="Numeric" Placeholder="€0.00" />
+
+                <Label Text="Done" VerticalTextAlignment="Center"  HorizontalOptions="Center" />
+                <Switch IsToggled="{Binding Done}" VerticalOptions="Center"  HorizontalOptions="Center"  />
+
+                <Button Text="Save" Clicked="Button_Clicked" />
+                <Button Text="Delete" Clicked="Button_Clicked_1" />
+                <Button Text="Cancel" Clicked="Button_Clicked_2" />
+                <Button Text="Speak" Clicked="Button_Clicked_3" />
+            </StackLayout>
 
         </ScrollView>
     </ContentPage.Content>
