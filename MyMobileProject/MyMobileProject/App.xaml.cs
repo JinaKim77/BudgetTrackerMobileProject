@@ -1,9 +1,9 @@
-﻿using MyMobileProjec;
+using MyMobileProjec;
 using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using System.IO;
 using System.Diagnostics;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MyMobileProject
@@ -18,8 +18,8 @@ namespace MyMobileProject
             Resources.Add("primaryGreen", Color.FromHex("CadetBlue"));
             Resources.Add("primaryDarkGreen", Color.FromHex("6FA22E"));
 
-            var nav = new NavigationPage(new EnteringPage()) { BarBackgroundColor = Color.CadetBlue, BackgroundColor = Color.Olive, BarTextColor = Color.White, Title = "Hello" };
-           // nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
+            var nav = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.CadetBlue, BackgroundColor = Color.Olive, BarTextColor = Color.White, Title = "Hello" };
+            //nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
             //nav.BarTextColor = Color.White;
 
             MainPage = nav;
