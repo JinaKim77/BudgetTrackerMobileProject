@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyMobileProject.ExpenditureItemPage"
-             Title="{Binding Name}"   xmlns:sys="clr-namespace:System;assembly=mscorlib"  >
+             Title="{Binding Name}"   xmlns:sys="clr-namespace:System;assembly=mscorlib" >
     <ContentPage.Content>
 
 
@@ -23,7 +23,7 @@
                 <Button Text="Save" Clicked="Button_Clicked" />
                 <Button Text="Delete" Clicked="Button_Clicked_1" />
                 <Button Text="Cancel" Clicked="Button_Clicked_2" />
-                <Button Text="Speak" Clicked="Button_Clicked_3" />
+                <Button Text="Speak" Clicked="Button_Clicked_3"   />
             </StackLayout>
 
         </ScrollView>
