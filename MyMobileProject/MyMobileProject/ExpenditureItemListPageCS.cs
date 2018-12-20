@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using MyMobileProjec;
+using System;
 using System.Diagnostics;
 using Xamarin.Forms;
-using MyMobileProjec;
 
 namespace MyMobileProject
 {
@@ -14,7 +11,7 @@ namespace MyMobileProject
 
         public ExpenditureItemListPageCS ()
 		{
-            Title = "List";
+            Title = "List Page";
 
             var toolbarItem = new ToolbarItem
             {
@@ -62,7 +59,7 @@ namespace MyMobileProject
             };
             listView.ItemSelected += async (sender, e) =>
             {
-               
+                
                 if (e.SelectedItem != null)
                 {
                     await Navigation.PushAsync(new ExpenditureItemPageCS
