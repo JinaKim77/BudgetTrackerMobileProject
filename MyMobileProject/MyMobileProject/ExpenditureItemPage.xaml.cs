@@ -47,16 +47,6 @@ namespace MyMobileProject
             }
         }
 
-        public void getTotalExpenses()
-        {
-            double amount = Convert.ToDouble(EntryValue.Text);
-            double total = 0;
-            double totalAmount = amount + total;
-            TotalAmount.Text = "The total amount is: " + totalAmount.ToString();
-
-        }
-
-
         async void Button_Clicked_1(object sender, EventArgs e)  //delete
         {
 
