@@ -16,7 +16,6 @@
                      AbsoluteLayout.LayoutBounds="0,0,1,1"
                      AbsoluteLayout.LayoutFlags="All">
 
-                
                 <StackLayout VerticalOptions="CenterAndExpand" >
                     <Image Source="penguin.png" />
                     <Label Text="Daily expense tracker" HorizontalTextAlignment="Center" FontSize="40" TextColor="WhiteSmoke" FontAttributes="Bold" />
