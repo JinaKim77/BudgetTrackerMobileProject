@@ -1,4 +1,4 @@
-﻿using MyMobileProjec;
+using MyMobileProjec;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +14,6 @@ namespace MyMobileProject
 		{
             Title = "expenditure Item";
 
-           
-
             var nameEntry = new Entry();
             nameEntry.SetBinding(Entry.TextProperty, "Name");
 
@@ -30,7 +28,7 @@ namespace MyMobileProject
             {
                 var expenditureItem = (ExpenditureItem)BindingContext;
                 await App.Database.SaveItemAsync(expenditureItem);
-                await App.Database.SaveItemAsyncs(expenditureItem);
+
                 await Navigation.PopAsync();
 
 
