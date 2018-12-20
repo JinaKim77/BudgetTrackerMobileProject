@@ -1,14 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyMobileProject.ExpenditureItemListPage" BackgroundColor="LavenderBlush">
-    
-    
+
+
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Menu1" Text="Add Expenses" Order="Primary" Priority="0" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Text="+" Clicked="OnItemAdded">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, UWP" Value="plus.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    
     <ScrollView>
         <StackLayout Spacing="5" Padding="20" BackgroundColor="LightSlateGray">
             <Label Text=" We do not provide total amount, it only shows what you spend, use calculator!"
@@ -18,7 +23,7 @@
             <Label Text="       Category                                                                               Value"
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="White" />
 
-            <ListView x:Name="listView" Margin="20" ItemSelected="ListView_ItemSelected">
+            <ListView x:Name="listView" Margin="20"  ItemSelected="OnListItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
 
