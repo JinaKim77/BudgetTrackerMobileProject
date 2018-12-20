@@ -1,10 +1,6 @@
 using MyMobileProjec;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Xamarin.Forms;
+
 
 namespace MyMobileProject
 {
@@ -12,7 +8,7 @@ namespace MyMobileProject
 	{
 		public ExpenditureItemPageCS ()
 		{
-            Title = "expenditure Item";
+            Title = "Expenditure Item";
 
             var nameEntry = new Entry();
             nameEntry.SetBinding(Entry.TextProperty, "Name");
@@ -26,21 +22,16 @@ namespace MyMobileProject
             var saveButton = new Button { Text = "Save" };
             saveButton.Clicked += async (sender, e) =>
             {
-                var expenditureItem = (ExpenditureItem)BindingContext;
-                await App.Database.SaveItemAsync(expenditureItem);
-
+                var todoItem = (ExpenditureItem)BindingContext;
+                await App.Database.SaveItemAsync(todoItem);
                 await Navigation.PopAsync();
-
-
             };
-
-
 
             var deleteButton = new Button { Text = "Delete" };
             deleteButton.Clicked += async (sender, e) =>
             {
-                var expenditureItem = (ExpenditureItem)BindingContext;
-                await App.Database.DeleteItemAsync(expenditureItem);
+                var todoItem = (ExpenditureItem)BindingContext;
+                await App.Database.DeleteItemAsync(todoItem);
                 await Navigation.PopAsync();
             };
 
@@ -53,8 +44,8 @@ namespace MyMobileProject
             var speakButton = new Button { Text = "Speak" };
             speakButton.Clicked += (sender, e) =>
             {
-                var expenditureItem = (ExpenditureItem)BindingContext;
-                DependencyService.Get<ITextToSpeech>().Speak(expenditureItem.Name + " " + expenditureItem.Notes);
+                var todoItem = (ExpenditureItem)BindingContext;
+                DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);
             };
 
             Content = new StackLayout

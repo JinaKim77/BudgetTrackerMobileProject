@@ -7,8 +7,8 @@
              Title="Welcome to budget tracker" BarBackgroundColor="DimGray"
              BarTextColor="Wheat" >
 
-  
-    <NavigationPage Title="All expenses" >s
+
+    <NavigationPage Title="All expenses" >
         <x:Arguments>
             <local:ExpenditureItemListPage />
         </x:Arguments>

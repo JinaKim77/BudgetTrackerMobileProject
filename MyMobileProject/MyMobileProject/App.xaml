@@ -5,11 +5,5 @@
     
     <Application.Resources>
 
-        <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="DarkTurquoise"/>
-            <Setter Property="BarTextColor" Value="Black"/>
-            <Setter Property="Title" Value="Hello"/>
-        </Style>
-
     </Application.Resources>
 </Application>

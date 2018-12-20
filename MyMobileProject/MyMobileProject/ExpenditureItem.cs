@@ -1,5 +1,4 @@
 using SQLite;
-using System;
 
 namespace MyMobileProjec
 {
@@ -11,9 +10,6 @@ namespace MyMobileProjec
         public string Name { get; set; }
         public string Notes { get; set; }
         public bool Done { get; set; }
-
-
- 
 
     }
 }

@@ -1,9 +1,9 @@
-using MyMobileProjec;
 using System;
 using System.IO;
 using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MyMobileProjec;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MyMobileProject
@@ -15,16 +15,15 @@ namespace MyMobileProject
         public App()
         {
             Resources = new ResourceDictionary();
-            Resources.Add("primaryGreen", Color.FromHex("CadetBlue"));
+            Resources.Add("primaryGreen", Color.FromHex("91CA47"));
             Resources.Add("primaryDarkGreen", Color.FromHex("6FA22E"));
 
-            var nav = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.CadetBlue, BackgroundColor = Color.Olive, BarTextColor = Color.White, Title = "Hello" };
-            //nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
-            //nav.BarTextColor = Color.White;
+            var nav = new NavigationPage(new ExpenditureItemListPage());
+            nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
+            nav.BarTextColor = Color.White;
 
             MainPage = nav;
         }
-
         public static ExpenditureItemDatabase Database
         {
             get

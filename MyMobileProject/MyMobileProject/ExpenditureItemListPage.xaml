@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyMobileProject.ExpenditureItemListPage" BackgroundColor="LavenderBlush">
 
-
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="OnItemAdded">
             <ToolbarItem.Icon>
@@ -20,7 +19,7 @@
                    
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="Black" />
 
-            <Label Text="       Category                                                                               Value"
+            <Label Text="       Category                                            Value"
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="White" />
 
             <ListView x:Name="listView" Margin="20"  ItemSelected="OnListItemSelected">
@@ -34,19 +33,10 @@
                                 <StackLayout Orientation="Horizontal" Padding="0,0,0,0" Margin="0,0,0,0" HorizontalOptions="FillAndExpand">
                                     <BoxView WidthRequest="3" BackgroundColor="OrangeRed" Margin="0,0,0,0" />
 
-                                    <Label  Grid.Row="0" Grid.Column="0" 
-                                             FontSize="15" FontAttributes="None" TextColor="White" 
-                                            Text="{Binding Name}" VerticalTextAlignment="Center"
-                                            HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
 
-                                    <Label Grid.Row="1" Grid.Column="2"  Margin="0,0,10,0"
-                                           FontSize="18" FontAttributes="Bold" TextColor="White" 
-                                           x:Name="getNums" Text="{Binding Notes}"
-                                           VerticalTextAlignment="End"  HorizontalOptions="EndAndExpand" />
-
-                                    <Label x:Name="TotalAmount " Text="{Binding AnswerValue}" HorizontalOptions="Center"
-                                           VerticalTextAlignment="Center" />
-
+                                    <Label Text="{Binding Notes}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                
                                     <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
 
                                 </StackLayout>
@@ -60,8 +50,7 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-            <Button x:Name="addExpenditure" Text="+ expenditure"  TextColor="WhiteSmoke" FontSize="Small" HorizontalOptions="CenterAndExpand"  
-                    BackgroundColor="Gray" Clicked="AddExpenditure_Clicked"/>
+            
 
             
 
