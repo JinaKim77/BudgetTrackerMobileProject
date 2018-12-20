@@ -14,12 +14,7 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="add expenses" >
-        <x:Arguments>
-            <local:ExpenditureItemPage />
-        </x:Arguments>
-    </NavigationPage>
-
+   
     <NavigationPage Title="Contact" >
         <x:Arguments>
             <local:Contact />
