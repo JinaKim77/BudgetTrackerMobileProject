@@ -15,7 +15,7 @@ namespace MyMobileProject
 
             var toolbarItem = new ToolbarItem
             {
-                Text = "+",
+                Text = "Add Expenditure",
                 Icon = Device.RuntimePlatform == Device.iOS ? null : "plus.png"
             };
             toolbarItem.Clicked += async (sender, e) =>

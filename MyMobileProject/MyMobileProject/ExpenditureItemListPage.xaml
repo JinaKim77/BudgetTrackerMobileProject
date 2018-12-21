@@ -4,7 +4,7 @@
              x:Class="MyMobileProject.ExpenditureItemListPage" BackgroundColor="LavenderBlush">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+" Clicked="OnItemAdded">
+        <ToolbarItem Text="Add expenditure" Clicked="OnItemAdded">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android, UWP" Value="plus.png" />
@@ -15,11 +15,11 @@
 
     <ScrollView>
         <StackLayout Spacing="5" Padding="20" BackgroundColor="LightSlateGray">
-            <Label Text=" We do not provide total amount, it only shows what you spend, use calculator!"
+            <Label Text=" We do not provide total amount, it only shows what you have spent, use calculator!"
                    
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="Black" />
 
-            <Label Text="       Category                                   Value"
+            <Label Text="       Category                                                                    Value"
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="White" />
 
             <ListView x:Name="listView" Margin="20"  ItemSelected="OnListItemSelected">
@@ -35,7 +35,7 @@
 
                                     <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
 
-                                    <Label Text="{Binding Notes}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding Notes}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" />
                                 
                                     <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
 
