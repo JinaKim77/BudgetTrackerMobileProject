@@ -19,7 +19,7 @@
                    
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="Black" />
 
-            <Label Text="       Category                                                                    Value"
+            <Label Text="       Expense item                                                             Value"
                    VerticalTextAlignment="Center"  HorizontalOptions="StartAndExpand" TextColor="White" />
 
             <ListView x:Name="listView" Margin="20"  ItemSelected="OnListItemSelected">

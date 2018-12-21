@@ -33,7 +33,7 @@ namespace MyMobileProject
 
             else
             {
-                DisplayAlert("welcome", str, "O");
+                DisplayAlert("Welcome", str, "OK");
                 Navigation.PushAsync(new MainPage());
             }
         }

@@ -8,7 +8,7 @@
 
             <StackLayout Spacing="5" Padding="20" BackgroundColor="LightSeaGreen">
 
-                <Label Text="Category" />
+                <Label Text="Expense item" />
                 <Entry x:Name="entryCategory" Text="{Binding Name}"  />
 
                 <Label Text="Value" />
